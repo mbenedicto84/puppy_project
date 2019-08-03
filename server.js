@@ -59,11 +59,7 @@ mongoose.connection.once('open', () => {
 })
 
 // Push New Routes
-app.get('/', (req, res) => {
-  res.render('index.ejs', {
-    currentUser: req.session.currentUser
-  })
-})
+
 
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 
@@ -75,17 +71,15 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 //localhost:3000
-app.get('/app', (req, res) => {
-  res.render('index.ejs', {
-    currentUser: req.session.currentUser
-  })
-})
 
 const userController = require('./controllers/users.js')
 app.use('/users', userController)
 
 const sessionsController = require('./controllers/sessions.js')
 app.use('/sessions', sessionsController)
+
+const petsController = require('./controllers/pets.js')
+app.use('/pets', petsController)
 //___________________
 //Listener
 //___________________

@@ -22,7 +22,7 @@ User.findOne({username: req.body.username}, (err, foundUser) => {
         // add the user to our session
         req.session.currentUser = foundUser
         // redirect back to our home page
-        res.redirect('/')
+        res.redirect('/pets')
       } else { // passwords do not match
         res.send('<a href="/"> password does not match </a>')
       }
@@ -32,7 +32,7 @@ User.findOne({username: req.body.username}, (err, foundUser) => {
 
 sessions.delete('/', (req, res)=>{
     req.session.destroy(() => {
-        res.redirect('/')
+        res.redirect('/pets')
     })
 })
 

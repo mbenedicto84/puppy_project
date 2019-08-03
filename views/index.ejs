@@ -4,25 +4,48 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <div class="container">
-      <h1>
+
+    <nav>
       <% if(currentUser) { %>
         Welcome <%=currentUser.username%>!
+        <div>
+            <a href="/pets/new">Admin</a>
+        </div>
+          <form action="/sessions?_method=DELETE" method="POST">
+              <input type="submit" value="Logout" class="waves-effect waves-light btn"/>
+          </form>
+            <% } else { %>
+              <a  href="/users/new">Sign Up</a></h2>
+              <a  href="/sessions/new">Log In</a>
+            <% } %>
+    </nav>
+    <div class="container">
 
-        <form action="/sessions?_method=DELETE" method="POST">
-   <input type="submit" value="Logout" class="waves-effect waves-light btn"/>
-</form>
-      </h1>
-      <% } else { %>
-        <h2>
-  <a class="waves-effect waves-light btn" href="/app">Join the Party</a>
-</h2>
-        <h2>Please </h2>
-        <a class="waves-effect waves-light btn" href="/users/new">Sign Up</a></h2>
-        <h3>or</h3>
-        <a class="waves-effect waves-light btn" href="/sessions/new">Log In</a>
-      <% } %>
+        <% for(let i = 0; i < pets.length; i++){ %>
+          <div class="display">
+      <div class="holder">
+            <a href="/pets/<%=pets[i].id; %>">
+                <%=pets[i].name; %><br>
+            </a>
+            </div>
+            <div class="holder">
+                <%=pets[i].description; %>
+            </div>
+            <div class="holder">
+
+                <img src="<%=pets[i].img; %>" alt="">
+            </div>
+
+
+
+              <% } %>
+
+
+
     </div>
+
+      </body>
+
 
   </body>
 </html>
