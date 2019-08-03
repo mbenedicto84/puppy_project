@@ -32,18 +32,23 @@
                 <%=pets[i].description; %>
             </div>
             <div class="holder">
-
-                <img src="<%=pets[i].img; %>" alt="">
+              <img src="<%=pets[i].img; %>" alt="">
             </div>
-
-
-
+            <div class="holder">
+              <%=pets[i].age; %>
+            </div>
+            <div class="holder">
+            <%=pets[i].gender; %>
+            </div>
+            <div class="holder">
+          <a href="<%=pets[i].link; %>"> Adoption Link </a>
+            </div>
+            <div class="holder">
+                <%=pets[i].likes; %>
+            </div>
               <% } %>
-
-
-
-    </div>
-
+            </div>
+</div>
       </body>
 
 

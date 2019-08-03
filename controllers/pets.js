@@ -27,6 +27,16 @@ router.get('/new', (req, res) => {
     res.render('new.ejs');
 });
 
+router.put('/like/:id', (req, res)=>{
+
+    Pets.findByIdAndUpdate(req.params.id,{$inc:{ likes: 1 }}, (error, likePet)=>{
+
+
+    console.log(likePet);
+         res.redirect('/pets');
+    });
+})
+
 
 router.delete('/:id', (req, res) => {
     Pets.findByIdAndRemove(req.params.id, (error, deletedPets) => {

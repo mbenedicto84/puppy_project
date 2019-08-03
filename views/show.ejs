@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+<body>
+    <body>
+      <header>
+          Ollivander's Magic Shop
+      </header>
+          <div class="containerThree">
+      <div class="diplay">
+        <h1> Pet Page</h1>
+        <h2><%=pets.name; %></h2>
+
+        <div class="vision">
+            <h2>Description</h2>
+          <%=pets.description; %>
+        </div>
+        <div class="vision">
+          <img src="<%=pets.img; %>" alt="">
+        </div>
+
+
+
+          <form action="/pets/like/<%=pets.id;%>?_method=PUT" method="POST">
+                <input type="submit" value="Like"/>
+          </form>
+
+          <form action="/pets/<%=pets.id;%>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE"/>
+          </form>
+          <br>
+          <div ><a class="edit" href="/pets/<%=pets.id;%>/edit">Edit</a></div>
+
+          <br>
+        <nav>
+            <a href="/pets">Back to Pets</a>
+        </nav>
+      </div>
+    </div>
+=
+    </body>
+</html>
