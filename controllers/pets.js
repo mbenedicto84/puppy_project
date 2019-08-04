@@ -13,19 +13,27 @@ router.get('/seed', (req, res) => {
 });
 router.get('/', (req, res) => {
     Pets.find({}, (error, allPets) => {
-      console.log("Hello");
-      console.log(allPets);
         res.render('index.ejs',{
             pets:allPets,
             currentUser: req.session.currentUser
         });
     })
 });
+router.put('/:id', (req, res) => {
+  console.log('hello');
+    Pets.findByIdAndUpdate(req.params.id, {$set:req.body}, (err, updatedModel) => {
+      console.log(updatedModel)
+        res.redirect('/pets');
+
+    })
+});
 
 
 router.get('/new', (req, res) => {
-    res.render('new.ejs');
-});
+  res.render('new.ejs',{
+      currentUser: req.session.currentUser
+  });
+})
 
 router.put('/like/:id', (req, res)=>{
 
@@ -49,24 +57,20 @@ router.get('/:id/edit', (req, res) => {
         res.render(
             'edit.ejs',
             {
+              currentUser: req.session.currentUser,
                 pets:foundPets
             }
         );
     });
 });
 
-router.put('/:id', (req, res) => {
-
-    Pets.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
-        res.redirect('/pets');
-    })
-});
 
 
 router.get('/:id', (req, res) => {
     Pets.findById(req.params.id, (err, foundPets) => {
         res.render('show.ejs',{
-            pets:foundPets
+            pets:foundPets,
+            currentUser: req.session.currentUser
         });
     });
 });

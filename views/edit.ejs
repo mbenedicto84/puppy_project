@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+   <title>Rescue A Pet App</title>
+   <!--Import Google Icon Font-->
+   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+   <!-- CSS
+   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+   <link rel="stylesheet" href="/./css/normalize.css">
+   <link rel="stylesheet" href="/./css/skeleton.css">
+   <link rel="stylesheet" href="/./css/main.css">
+    </head>
+
+    <body>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+
+<body>
+  <nav>
+    <% include ./partials/nav.ejs %>
+  </nav>
+
+<header>
+Pet Rescue App
+</header>
+
+        <div class="containerTwo">
+        <div>
+        <h2><%=pets.name; %></h2>
+        <div class="">
+        <img src="<%=pets.img; %>" alt="">
+    </div>
+          <form action="/pets/<%=pets.id%>?_method=PUT" method="POST">
+            <input type="text" name="name" placeholder="Name"/><br/>
+       <input type="text" name="description" placeholder="Description" /><br/>
+
+          <input type="submit" name="" value="Edit Rescue" id="edit"/>
+          </form>
+      </div>
+      </div>
+      <div class="footertext">
+        <a href="/pets">Back to Pets</a>
+      </div>
+    </body>
+</html>

@@ -1,5 +1,138 @@
 nav{
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  justify-content: space-around;
+  align-content: center;
+  background-color: lightgrey;
+
+}
+img{
+  width: 300px;
+}
+header{
+  text-align: center;
+  margin: 30px;
+  font-size: 36px;
+}
+
+footer{
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  background-color: lightgrey;
+  position: fixed;
+  bottom: 0;
+}
+
+a{
+  color: red;
+}
+
+.row{
+  width:480px;
+}
+.container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+}
+
+.containerTwo{
+  display: flex;
+  justify-content:center;
+}
+
+.containerThree{
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  text-align: center;
+
+}
+
+.title{
+  padding: 10px;
+}
+
+.footertext{
+  padding: 15px;
+}
+
+
+.display{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  border-bottom: 1px solid black;
+
+}
+
+.displaytwo{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 10px;
+  border-bottom: 1px solid black;
+  width: 50%;
+
+}
+
+.vision{
+  margin: 5px;
+}
+
+.holder{
+  margin: 10px;
+  width: 100%;
+}
+
+.spacer{
+padding: 15px;
+}
+
+.logout{
+margin-top: 10px;
+}
+
+
+.feature{
+  padding: 30px;
+  text-align: center;
+  width: 400px;
+
+}
+
+.logo{
+  width: 230px;
+  height: 40px;
+  padding: 10px;
+}
+
+.log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerlog{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.heart {
+  width: 5%;
+  margin: 5px;
+}
+
+.pug{
+  width: 30px;
 }

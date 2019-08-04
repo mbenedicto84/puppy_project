@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+  <body>
+    <nav>
+      <% include ./partials/nav.ejs %>
+    </nav>
+    <header>
+      Rescue A Pet App
+    </header>
+
+    <div class="containerTwo">
+      <div>
+          <h3>New Pet Page</h3>
+      <form action="/pets" method="POST">
+           <input type="text" name="name" placeholder="Name"/><br/>
+        <input type="text" name="description" placeholder="Description" /><br/>
+        <input type="text" name="img" placeholder="Image"/><br/>
+          <br/>
+          <input type="text" name="gender" placeholder="Gender"/><br/>
+            <br/>
+            <input type="text" name="age" placeholder="age"/><br/>
+              <br/>
+              <input type="text" name="link" placeholder="Link"/><br/>
+                <br/>
+                <input type="number" name="likes" placeholder="Likes"/><br/>
+                  <br/>
+          <input type="submit" name="" value="Create Pet" id="create"/>
+
+      </form>
+        <a href="/pets">Back to Pets</a>
+
+    </div>
+    </div>
+    <footer>
+        <div class="footertext">
+          Made By A Pug Lover!
+        </div>
+</footer>
+  </body>
+</html>

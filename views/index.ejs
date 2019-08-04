@@ -5,25 +5,16 @@
   </head>
   <body>
 
-    <nav>
-      <% if(currentUser) { %>
-        Welcome <%=currentUser.username%>!
-        <div>
-            <a href="/pets/new">Admin</a>
-        </div>
-          <form action="/sessions?_method=DELETE" method="POST">
-              <input type="submit" value="Logout" class="waves-effect waves-light btn"/>
-          </form>
-            <% } else { %>
-              <a  href="/users/new">Sign Up</a></h2>
-              <a  href="/sessions/new">Log In</a>
-            <% } %>
-    </nav>
-    <div class="container">
+<nav>
+  <% include ./partials/nav.ejs %>
+</nav>
+<div class="container">
+<% for(let i = 0; i < pets.length; i++){ %>
 
-        <% for(let i = 0; i < pets.length; i++){ %>
-          <div class="display">
-      <div class="holder">
+<div class="row">
+    <div class="column feature">
+
+            <div class="holder">
             <a href="/pets/<%=pets[i].id; %>">
                 <%=pets[i].name; %><br>
             </a>
@@ -44,11 +35,22 @@
           <a href="<%=pets[i].link; %>"> Adoption Link </a>
             </div>
             <div class="holder">
-                <%=pets[i].likes; %>
+              <img class="heart" src="https://www.freepngimg.com/thumb/heart/2-2-heart-png-hd.png" alt=""><%=pets[i].likes; %>
             </div>
+        </div>
+        </div>
+
               <% } %>
+
+  </div>
+
+        </div>
+        </div>
+        <footer>
+            <div class="footertext">
+              Made By A Pug Lover!
             </div>
-</div>
+  </footer>
       </body>
 
 

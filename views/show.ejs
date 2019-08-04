@@ -5,40 +5,60 @@
 </head>
 <body>
     <body>
+      <nav>
+        <% include ./partials/nav.ejs %>
+      </nav>
       <header>
-          Ollivander's Magic Shop
+          <h1> Pet Page</h1>
       </header>
           <div class="containerThree">
-      <div class="diplay">
-        <h1> Pet Page</h1>
+      <div class="displaytwo">
+
         <h2><%=pets.name; %></h2>
 
         <div class="vision">
-            <h2>Description</h2>
+            <h3>Description</h3>
           <%=pets.description; %>
         </div>
         <div class="vision">
           <img src="<%=pets.img; %>" alt="">
         </div>
-
-
+        <div class="vision">
+        Gender: <%=pets.gender; %>
+        </div>
+        <div class="vision">
+          Age: <%=pets.age; %>
+        </div>
+        <div class="vision">
+          <a href="<%=pets.link; %>">Adoption Link</a>
+        </div>
+        <div class="vision">
+          <%=pets.like; %>
+        </div>
 
           <form action="/pets/like/<%=pets.id;%>?_method=PUT" method="POST">
                 <input type="submit" value="Like"/>
           </form>
+          <% if(currentUser) { %>
 
           <form action="/pets/<%=pets.id;%>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE"/>
           </form>
+          <%}%>
           <br>
           <div ><a class="edit" href="/pets/<%=pets.id;%>/edit">Edit</a></div>
 
           <br>
-        <nav>
+          <div class="footertext">
             <a href="/pets">Back to Pets</a>
-        </nav>
+          </div>
+
       </div>
     </div>
-=
+    <footer>
+        <div class="footertext">
+          Made By A Pug Lover!
+        </div>
+</footer>
     </body>
 </html>
