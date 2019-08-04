@@ -15,7 +15,7 @@ users.post('/', (req, res)=>{
             console.log(error)
           } else {
             console.log(createdUser)
-            res.redirect('/')
+            res.redirect('/pets')
           }
 
     })
