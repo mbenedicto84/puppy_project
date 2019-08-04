@@ -1,7 +1,8 @@
 nav{
   width: 100%;
   display: flex;
-  align-content: center;
+  flex-direction: row;
+  background-color: blue;
   background-color: lightgrey;
 
 }
@@ -104,6 +105,7 @@ body{
 }
 
 .spacer{
+  display: flex;
 padding: 15px;
 }
 
@@ -118,6 +120,7 @@ margin-top: 10px;
   width: 400px;
   background-color: rgba(238, 238, 238, .6);
   margin: 20px;
+  min-height: 800px;
 
 }
 
@@ -147,4 +150,6 @@ margin-top: 10px;
 
 .pug{
   width: 30px;
+  height: 40px;
+  padding: 5px;
 }
