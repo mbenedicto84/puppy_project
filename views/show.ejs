@@ -45,9 +45,9 @@
                 <input type="submit" value="DELETE"/>
           </form>
           <%}%>
-          <br>
+          <br>  <% if(currentUser) { %>
           <div ><a class="edit" href="/pets/<%=pets.id;%>/edit">Edit</a></div>
-
+            <%}%>
           <br>
           <div class="footertext">
             <a href="/pets">Back to Pets</a>
