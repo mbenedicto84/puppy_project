@@ -1,32 +1,38 @@
-<div class="logocontent">
-  <h3>Save A Paw <img class="heart" src="https://imgur.com/Ci12c77.png" alt=""> </h3>
-</div>
-
-<div class="spacer">
-  <% if(currentUser) { %>
-  Welcome <%=currentUser.username%> !
-</div>
-
-  <div class="spacer">
-  <a href="/pets/new">Admin</a>
+<div class="mother">
+  <div class="logocontent">
+    <h3>Save A Paw <img class="heart" src="https://imgur.com/Ci12c77.png" alt=""> </h3>
   </div>
 
-  <div class="spacer">
-    <form class="logout" action="/sessions?_method=DELETE" method="POST">
-    <input type="submit" value="Logout" />
-    </form>
-  </div>
 
-  <% } else { %>
+    <% if(currentUser) { %>
+      <div class="spacer">
+            Welcome <%=currentUser.username%> !
+      </div>
+
+
+
     <div class="spacer">
-        <a  href="/users/new">Sign Up</a>
+    <a href="/pets/new">Admin</a>
     </div>
 
-    <div class="spacer" >
-        <a  href="/sessions/new">Log In</a>
+    <div class="spacer">
+      <form class="logout" action="/sessions?_method=DELETE" method="POST">
+      <input type="submit" value="Logout" />
+      </form>
     </div>
 
-  <% } %>
-  <div class="spacer" >
-      <img src="https://hanatemplate.com/images/anime-pug-3.png" alt="pug" class="pug scale-up-center ">
-  </div>
+    <% } else { %>
+      <div class="spacer">
+          <a  href="/users/new">Sign Up</a>
+      </div>
+
+      <div class="spacer" >
+          <a  href="/sessions/new">Log In</a>
+      </div>
+
+    <% } %>
+    <div class="spaced" >
+        <img src="https://hanatemplate.com/images/anime-pug-3.png" alt="pug" class="pug scale-up-center ">
+    </div>
+
+</div>

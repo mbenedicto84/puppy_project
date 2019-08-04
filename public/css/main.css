@@ -106,13 +106,26 @@ body{
   margin: 10px;
   width: 100%;
 }
-
-.spacer{
+.mother{
   display: flex;
 
-padding-top:  20px;
-padding-right: 15px;
 }
+
+.spacer{
+display: flex;
+margin-top: 40px;
+margin-right: 20px;
+
+}
+
+.spaced{
+display: flex;
+margin-top: 30px;
+margin-right: 20px;
+
+}
+
+
 
 .logout{
 margin-top: 10px;
