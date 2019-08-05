@@ -31,7 +31,8 @@ a {
 }
 
 a:hover{
-  color: black;
+  color: grey;
+  text-decoration: underline;
 }
 
 .mochi{
