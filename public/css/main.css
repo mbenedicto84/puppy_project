@@ -139,6 +139,13 @@ font-size: 26px;
 
 }
 
+.spaceman{
+display: flex;
+margin-top: 20px;
+margin-right: 20px;
+font-size: 26px;
+
+}
 
 
 .logout{
