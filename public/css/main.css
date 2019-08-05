@@ -26,6 +26,8 @@ footer{
 
 a {
   color: red;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 body{
@@ -141,6 +143,13 @@ margin-top: 10px;
   min-height: 900px;
 
 }
+
+.feature:hover{
+
+  background-color: rgba(238, 238, 238, 1);
+
+}
+
 
 .logo{
 width: 100%;
