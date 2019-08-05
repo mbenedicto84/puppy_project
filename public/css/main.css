@@ -321,7 +321,9 @@ line-height: 120%;
   background-color: rgba(238, 238, 238, .6);
   color: red;
  }
-
+ #openModal:hover{
+  background-color: rgba(238, 238, 238, 1);
+ }
  .sense{
 display: flex;
 justify-content: center;
