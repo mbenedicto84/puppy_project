@@ -3,7 +3,7 @@ nav{
   display: flex;
   flex-direction: row;
   background-color: blue;
-  background-color: lightgrey;
+  background-color: rgba(236, 236, 236, .5);
 
 }
 img{
@@ -19,7 +19,7 @@ footer{
   width: 100%;
   height: 100px;
   text-align: center;
-  background-color: lightgrey;
+  background-color: rgba(236, 236, 236, 1);
   position: fixed;
   bottom: 0;
 }
