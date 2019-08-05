@@ -3,7 +3,7 @@ nav{
   display: flex;
   flex-direction: row;
   background-color: blue;
-  background-color: rgba(236, 236, 236, .5);
+  background-color: rgba(236, 236, 236, 1);
 
 }
 img{
@@ -256,8 +256,8 @@ line-height: 120%;
     top: 0;
     left: 0;
     width: 100vw;
- height: 100vh;
- object-fit: cover;
+    height: 100vh;
+    object-fit: cover;
     z-index: -1;
     pointer-events: none;
     overflow: hidden;
