@@ -293,3 +293,37 @@ line-height: 120%;
     left: 50%;
     transform: translate(-50%, -50%);
  }
+
+ #modal {
+ 	background-color: rgba(0,0,0,0.4);
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	height: 100%;
+ 	width: 100%;
+ 	z-index: 1;
+ 	overflow: auto;
+  display: none;
+/*Set this to `none` so that the modal does not show initially on page load.*/
+ }
+
+ #modal-textbox {
+ 	background-color: white;
+ 	height: 350px;
+ 	width: 550px;
+ 	border-radius: 2px;
+ 	margin: 150px auto;
+ 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+ }
+
+ #openModal{
+   margin: 0 auto;
+  background-color: rgba(238, 238, 238, .6);
+  color: red;
+ }
+
+ .sense{
+display: flex;
+justify-content: center;
+padding: 50px;
+ }
