@@ -30,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+a:hover{
+  color: black;
+}
+
 .mochi{
   background-image: url('https://wallpapercave.com/wp/NRgetGw.jpg');
   width: 100%;
