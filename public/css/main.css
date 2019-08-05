@@ -308,11 +308,11 @@ line-height: 120%;
  }
 
  #modal-textbox {
- 	background-color: white;
  	height: 350px;
  	width: 550px;
  	border-radius: 2px;
  	margin: 150px auto;
+  background-color: rgba(238, 238, 238, .8);
  	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
  }
 
