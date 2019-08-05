@@ -34,7 +34,7 @@ router.get('/new', (req, res) => {
       currentUser: req.session.currentUser,
 
   });
-    
+
 })
 
 router.put('/like/:id', (req, res)=>{
@@ -46,6 +46,8 @@ router.put('/like/:id', (req, res)=>{
          res.redirect('/pets');
     });
 })
+
+
 
 
 router.delete('/:id', (req, res) => {

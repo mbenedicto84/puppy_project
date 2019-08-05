@@ -46,6 +46,10 @@
             <div class="holder">
               <img class="heart" src="https://www.freepngimg.com/thumb/heart/2-2-heart-png-hd.png" alt=""><%=pets[i].likes; %>
             </div>
+
+        <form action="/pets/like/<%=pets[i].id; %>?_method=PUT" method="POST">
+              <input type="submit" value="Like"/>
+        </form>
         </div>
         </div>
 
