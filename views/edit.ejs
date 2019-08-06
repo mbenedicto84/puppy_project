@@ -35,7 +35,8 @@ Pet Rescue App
     </div>
           <form action="/pets/<%=pets.id%>?_method=PUT" method="POST">
             <input type="text" name="name" placeholder="Name"/><br/>
-       <input type="text" name="description" placeholder="Description" /><br/>
+       <textarea type="text" name="description" placeholder="Description" /></textarea>
+       <br>
 
           <input type="submit" name="" value="Edit Rescue" id="edit"/>
           </form>

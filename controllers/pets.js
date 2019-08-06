@@ -43,7 +43,7 @@ router.put('/like/:id', (req, res)=>{
 
 
     console.log(likePet);
-         res.redirect('/pets');
+         res.get('/pets');
     });
 })
 
